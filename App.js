@@ -3,20 +3,21 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    // <View style={styles.container}>
 
-      <Card
-        title='Red Jacket For Sale'
-        subTitle='$100'
-        image={require('./app/assets/jacket.jpg')}
-      />
-    </View>
-    // <WelcomeScreen />
+    //   <Card
+    //     title='Red Jacket For Sale'
+    //     subTitle='$100'
+    //     image={require('./app/assets/jacket.jpg')}
+    //   />
+    // </View>
+    <ListingDetailsScreen />
   );
 }
 
