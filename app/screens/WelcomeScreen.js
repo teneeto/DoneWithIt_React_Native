@@ -3,7 +3,9 @@ import { ImageBackground, StyleSheet } from 'react-native';
 
 function WelcomeScreen(props) {
   return (
-    <ImageBackground style={styles.background} source={require('../assets/background.jpg')}>
+    <ImageBackground
+      style={styles.background}
+      source={require('../assets/background.jpg')}>
 
     </ImageBackground>
   );
