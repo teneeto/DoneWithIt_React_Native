@@ -23,7 +23,10 @@ export default function App() {
     // </View>
     // <MessagesScreen />
     <Screen>
-      <ListItem title='Title' subTitle='SubTitle' />
+      <ListItem
+        title='Title'
+        // subTitle='SubTitle'
+        ImageComponent={<Icon name='email' />} />
     </Screen>
   );
 }
