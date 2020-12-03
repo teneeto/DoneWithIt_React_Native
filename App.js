@@ -3,6 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
+import Icon from './app/components/Icon';
+import ListItem from './app/components/ListItem';
+import Screen from './app/components/Screen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
@@ -18,7 +21,10 @@ export default function App() {
     //     image={require('./app/assets/jacket.jpg')}
     //   />
     // </View>
-    <MessagesScreen />
+    // <MessagesScreen />
+    <Screen>
+      <ListItem title='Title' subTitle='SubTitle' />
+    </Screen>
   );
 }
 
