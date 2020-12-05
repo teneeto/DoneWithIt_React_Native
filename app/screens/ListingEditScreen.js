@@ -41,7 +41,6 @@ function ListingEditScreen(props) {
           maxLength={255}
           name='title'
           placeholder='Title'
-          width={255}
         />
         <FormField
           keyboardType='numeric'
@@ -53,7 +52,6 @@ function ListingEditScreen(props) {
           items={categories}
           name='category'
           placeholder='Category'
-          width='50%'
         />
         <FormField
           maxLength={255}
