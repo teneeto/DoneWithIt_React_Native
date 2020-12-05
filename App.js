@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
+import AppPicker from './app/components/AppPicker';
 import AppTextinput from './app/components/AppTextinput';
 import Card from './app/components/Card';
 import Icon from './app/components/Icon';
@@ -27,7 +28,8 @@ export default function App() {
     // <MessagesScreen />
     // <ListingsScreen />
     <Screen>
-      <AppTextinput placeholder='Username' icon='email' />
+      <AppPicker icon='apps' placeholder='Category' />
+      <AppTextinput icon='email' placeholder='Email' />
     </Screen>
   );
 }
