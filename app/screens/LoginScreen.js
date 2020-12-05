@@ -6,8 +6,7 @@ import Screen from '../components/Screen';
 import { Image, StyleSheet } from 'react-native';
 import AppTextinput from '../components/AppTextinput';
 import AppButton from '../components/AppButton';
-import AppText from '../components/AppText';
-import ErrorMessage from '../components/ErrorMessage';
+import AppFormField from '../components/AppFormField';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label('Email'),
@@ -25,34 +24,27 @@ function LoginScreen(props) {
         onSubmit={values => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {({ handleSubmit }) => (
           <>
-
-
-            <AppTextinput
+            <AppFormField
               autoCapitalize='none'
               autoCorrect={false}
               icon='email'
               keyboardType='email-address'
-              onBlur={() => setFieldTouched('email')}
-              onChangeText={handleChange('email')}
+              name='email'
               placeholder='Email'
               textContentType='emailAddress'
             />
-
-            <ErrorMessage visible={touched.email} error={errors.email} />
 
             <AppTextinput
               autoCapitalize='none'
               autoCorrect={false}
               icon='lock'
-              onBlur={() => setFieldTouched('password')}
-              onChangeText={handleChange('password')}
+              name='password'
               placeholder='Password'
               secureTextEntry
               textContentType='password'
             />
-            <ErrorMessage visible={touched.password} error={errors.password} />
 
             <AppButton title='Login' onPress={handleSubmit} />
           </>
