@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
+import AppTextinput from './app/components/AppTextinput';
 import Card from './app/components/Card';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
@@ -24,13 +25,10 @@ export default function App() {
     //   />
     // </View>
     // <MessagesScreen />
-    <ListingsScreen />
-    // <Screen>
-    //   <ListItem
-    //     title='Title'
-    //     // subTitle='SubTitle'
-    //     ImageComponent={<Icon name='email' />} />
-    // </Screen>
+    // <ListingsScreen />
+    <Screen>
+      <AppTextinput placeholder='Username' icon='email' />
+    </Screen>
   );
 }
 
