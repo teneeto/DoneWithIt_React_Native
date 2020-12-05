@@ -14,6 +14,11 @@ import ListingsScreen from './app/screens/ListingsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
+const categories = [
+  { label: 'Furniture', value: '1' },
+  { label: 'Clothing', value: '2' },
+  { label: 'Cameras', value: '3' },
+]
 
 export default function App() {
   return (
@@ -28,7 +33,7 @@ export default function App() {
     // <MessagesScreen />
     // <ListingsScreen />
     <Screen>
-      <AppPicker icon='apps' placeholder='Category' />
+      <AppPicker items={categories} icon='apps' placeholder='Category' />
       <AppTextinput icon='email' placeholder='Email' />
     </Screen>
   );
