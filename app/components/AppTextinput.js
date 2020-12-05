@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Platform } from 'react-native'
+import { View, StyleSheet, TextInput } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { TextInput } from 'react-native-gesture-handler';
 
 import defaultStyles from '../config/styles';
 
