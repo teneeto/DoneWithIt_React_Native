@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
 import AppPicker from './app/components/AppPicker';
@@ -21,6 +20,7 @@ const categories = [
 ]
 
 export default function App() {
+  const [category, setCategory] = useState(categories[0].label);
   return (
     // <View style={styles.container}>
 
@@ -33,7 +33,12 @@ export default function App() {
     // <MessagesScreen />
     // <ListingsScreen />
     <Screen>
-      <AppPicker items={categories} icon='apps' placeholder='Category' />
+      <AppPicker
+        selectedItem={category}
+        onSelectItem={(item) => setCategory(item)}
+        items={categories}
+        icon='apps'
+        placeholder='Category' />
       <AppTextinput icon='email' placeholder='Email' />
     </Screen>
   );
