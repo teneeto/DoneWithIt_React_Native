@@ -7,8 +7,9 @@ import LoginScreen from './app/screens/LoginScreen';
 
 export default function App() {
   return (
-    <Screen>
-      <ListItem />
-    </Screen>
+    // <Screen>
+    //   <ListItem />
+    // </Screen>
+    <ListingEditScreen />
   );
 }
