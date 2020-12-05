@@ -11,8 +11,14 @@ function AppTextinput({ icon, ...other }) {
         name={icon}
         size={25}
         color={defaultStyles.colors.medium}
-        style={styles.icon} />}
-      <TextInput style={defaultStyles.text} {...other} />
+        style={styles.icon}
+      />}
+
+      <TextInput
+        placeholderTextColor={defaultStyles.colors.medium}
+        style={defaultStyles.text}
+        {...other}
+      />
     </View>
   );
 }
